@@ -144,7 +144,5 @@ The bottom strip of the widget shows live status:
 - Switching models reloads the correct button config for that model
 - The `Crayt Buttons Source` folder and its `main.lua` must remain
   separate from the `Crayt Buttons` folder — do not merge them
-- Crayt Buttons can coexist with Kyberpad on the same radio — assign
-  each to different models, both scripts use different keys and folders
 - ETHOS source values use a -1024 to +1024 internal scale (not -100 to +100)
 - The widget requires ETHOS 1.6.x or later
