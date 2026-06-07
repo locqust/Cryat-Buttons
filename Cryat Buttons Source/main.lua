@@ -1,6 +1,6 @@
 -- ============================================================
--- Crayt Buttons Source v1.0
--- Install to: /scripts/Crayt Buttons Source/main.lua
+-- Cryat Buttons Source v1.0
+-- Install to: /scripts/Cryat Buttons Source/main.lua
 --
 -- Matches Kyberpad Source structure exactly.
 -- NO value function registered - ETHOS manages value internally.
@@ -12,7 +12,7 @@ local function init()
 end
 
 system.registerSource({
-  key  = "CraytBS",
-  name = "Crayt Buttons Source",
+  key  = "CryatBS",
+  name = "Cryat Buttons Source",
   init = init,
 })

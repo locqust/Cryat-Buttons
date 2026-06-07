@@ -1,14 +1,14 @@
 -- ============================================================
--- Crayt Buttons v1.0
+-- Cryat Buttons v1.0
 -- Lua widget for FrSky ETHOS 1.6.x
 -- For use with the Krayt control system on ESP32
 -- ============================================================
 
 local VERSION     = "1.0"
-local WIDGET_KEY  = "CraytB"
-local WIDGET_NAME = "Crayt Buttons"
-local IMG_PATH    = "/scripts/Crayt Buttons/Images/"
-local CFG_PATH    = "/scripts/Crayt Buttons/config/"
+local WIDGET_KEY  = "CryatB"
+local WIDGET_NAME = "Cryat Buttons"
+local IMG_PATH    = "/scripts/Cryat Buttons/Images/"
+local CFG_PATH    = "/scripts/Cryat Buttons/config/"
 
 local LAYOUT = {
   cols=5, rows=3, marginX=4, marginY=4,
@@ -63,7 +63,7 @@ local function create()
     wifiSource   = nil,
     randomSource = nil,
     imuSource    = nil,
-    buttonSource = nil,   -- handle to Crayt Buttons Source LUA source
+    buttonSource = nil,   -- handle to Cryat Buttons Source LUA source
     pressColor = lcd.RGB(248, 252, 248),
     btnColor   = {},
     btnText    = {},
@@ -100,7 +100,7 @@ local function paint(w)
     loadBitmaps(w)
     loadFile(w)
     -- Resolve button source here since read() may not be called
-    w.buttonSource = system.getSource({name = "Crayt Buttons Source"})
+    w.buttonSource = system.getSource({name = "Cryat Buttons Source"})
     w.loaded = true
   end
 
@@ -168,7 +168,7 @@ local function paint(w)
 
   lcd.font(FONT_S)
   lcd.color(lcd.RGB(160,160,160))
-  lcd.drawText(winW-iw-60, sy+10, "Crayt Buttons V"..VERSION, RIGHT)
+  lcd.drawText(winW-iw-60, sy+10, "Cryat Buttons V"..VERSION, RIGHT)
 
 
 end
@@ -315,8 +315,8 @@ local function read(w)
   w.wifiSource   = storage.read("wifiSource")
   w.randomSource = storage.read("randomSource")
   w.imuSource    = storage.read("imuSource")
-  -- Resolve the Crayt Buttons Source LUA source (same method as Kyberpad)
-  w.buttonSource = system.getSource({name = "Crayt Buttons Source"})
+  -- Resolve the Cryat Buttons Source LUA source (same method as Kyberpad)
+  w.buttonSource = system.getSource({name = "Cryat Buttons Source"})
   print("buttonSource resolved: "..tostring(w.buttonSource))
   loadFile(w)
 end
