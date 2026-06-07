@@ -1,4 +1,4 @@
-# Crayt Buttons Installation Guide
+# Cryat Buttons Installation Guide
 Version 1.0 | For FrSky ETHOS 1.6.x | Tested on X20S
 
 ---
@@ -7,7 +7,7 @@ Version 1.0 | For FrSky ETHOS 1.6.x | Tested on X20S
 
 ```
 /scripts/
-  Crayt Buttons/
+  Cryat Buttons/
     main.lua                  ← main widget
     Images/
       greenwifi.png           (32x32px - WiFi ON icon)
@@ -20,7 +20,7 @@ Version 1.0 | For FrSky ETHOS 1.6.x | Tested on X20S
       imuon.png               (32x32px - IMU/stabilisation ON icon)
       imuoff.png              (32x32px - IMU/stabilisation OFF icon)
     config/                   (folder must exist, files created automatically)
-  Crayt Buttons Source/
+  Cryat Buttons Source/
     main.lua                  ← companion source script
 ```
 
@@ -31,8 +31,8 @@ Version 1.0 | For FrSky ETHOS 1.6.x | Tested on X20S
 - Power on the radio
 - Connect via USB, choose Ethos Suite on the radio screen
 - Copy both folders above to `/scripts/` on the SD card
-- Create the `/scripts/Crayt Buttons/config/` folder (empty, required)
-- Copy all 9 image files into `/scripts/Crayt Buttons/Images/`
+- Create the `/scripts/Cryat Buttons/config/` folder (empty, required)
+- Copy all 9 image files into `/scripts/Cryat Buttons/Images/`
 - Unplug USB, power cycle the radio
 
 ---
@@ -41,7 +41,7 @@ Version 1.0 | For FrSky ETHOS 1.6.x | Tested on X20S
 
 - Main screen → tap the **Model** icon (plane) → **Edit Model**
 - Scroll down to **Lua Sources** → tap it
-- Tick **Crayt Buttons Source**
+- Tick **Cryat Buttons Source**
 - Go back to the Model page
 
 ---
@@ -49,8 +49,8 @@ Version 1.0 | For FrSky ETHOS 1.6.x | Tested on X20S
 ## Step 3 - Set Up the Mixer Channel
 
 - Model page → **Mixer** → tap **+** → **Free Mix** → **Last Position**
-- Set the **Name** to: `CRAYT BUTTONS`
-- Tap **Source** → Category: **Lua** → select **Crayt Buttons Source**
+- Set the **Name** to: `CRYAT BUTTONS`
+- Tap **Source** → Category: **Lua** → select **Cryat Buttons Source**
 - Scroll down to **Output1** → select a free channel (e.g. CH9)
 - When asked to copy the mix name to the channel, tap **Yes**
 - Go back to the main screen
@@ -62,7 +62,7 @@ Version 1.0 | For FrSky ETHOS 1.6.x | Tested on X20S
 - Main screen → tap the **Display Edit** icon (grid symbol)
 - Tap **+** to add a new screen
 - Choose the **full screen** window layout (the large single panel option)
-- Tap **Change Widget** → select **Crayt Buttons**
+- Tap **Change Widget** → select **Cryat Buttons**
 - Tap **Configure**
 
 ---
@@ -92,12 +92,12 @@ Switch values are read on the -1024 to +1024 internal ETHOS scale:
 
 ---
 
-## Step 6 - Teach the Crayt Board Button Values
+## Step 6 - Teach the Cryat Board Button Values
 
-The Crayt Buttons widget sends sBus values on the configured channel.
-Use the Crayt board web interface to map each button:
+The Cryat Buttons widget sends sBus values on the configured channel.
+Use the Cryat board web interface to map each button:
 
-1. Open the Crayt board web interface
+1. Open the Cryat board web interface
 2. Go to **Buttons Value** tab
 3. With no buttons pressed, note the **sBus Value** shown — enter this in the **Released** field
 4. Tap **Button 1** on the radio screen, note the sBus value, enter it in **Button 1**
@@ -140,9 +140,9 @@ The bottom strip of the widget shows live status:
 ## Notes
 
 - Button colours and labels are saved per model name automatically
-  in `/scripts/Crayt Buttons/config/YourModelName.txt`
+  in `/scripts/Cryat Buttons/config/YourModelName.txt`
 - Switching models reloads the correct button config for that model
-- The `Crayt Buttons Source` folder and its `main.lua` must remain
-  separate from the `Crayt Buttons` folder — do not merge them
+- The `Cryat Buttons Source` folder and its `main.lua` must remain
+  separate from the `Cryat Buttons` folder — do not merge them
 - ETHOS source values use a -1024 to +1024 internal scale (not -100 to +100)
 - The widget requires ETHOS 1.6.x or later
